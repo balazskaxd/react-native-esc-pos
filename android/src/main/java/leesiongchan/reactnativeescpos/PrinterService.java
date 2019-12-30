@@ -255,7 +255,7 @@ public class PrinterService {
             }
 
             try {
-                baos.write(layoutBuilder.createFromDesign(line, charsOnLine).getBytes("GBK"));
+                baos.write(layoutBuilder.createFromDesign(line, charsOnLine).getBytes("UTF-8"));
             } catch (UnsupportedEncodingException e) {
                 // Do nothing?
             }
