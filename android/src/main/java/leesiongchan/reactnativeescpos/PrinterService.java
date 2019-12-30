@@ -46,7 +46,7 @@ public class PrinterService {
     }
 
     public void print(String text) throws UnsupportedEncodingException {
-        write(text.getBytes("UTF-8"));
+        write(text.getBytes("Cp1252"));
     }
 
     public void printLn(String text) throws UnsupportedEncodingException {
@@ -255,7 +255,7 @@ public class PrinterService {
             }
 
             try {
-                baos.write(layoutBuilder.createFromDesign(line, charsOnLine).getBytes("UTF-8"));
+                baos.write(layoutBuilder.createFromDesign(line, charsOnLine).getBytes("Cp1252"));
             } catch (UnsupportedEncodingException e) {
                 // Do nothing?
             }
